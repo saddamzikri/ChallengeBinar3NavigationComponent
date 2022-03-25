@@ -24,6 +24,7 @@ class FragmentPertama : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // meneruskan ke fragment kedua
         binding.btnScreen1.setOnClickListener {
             it.findNavController().navigate(R.id.action_fragmentPertama_to_fragmentKedua)
         }

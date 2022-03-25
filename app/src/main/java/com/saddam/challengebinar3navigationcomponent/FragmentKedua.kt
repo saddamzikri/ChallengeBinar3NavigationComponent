@@ -28,11 +28,14 @@ class FragmentKedua : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // binding data nama ke fragment 3
         binding.btnScreen2.setOnClickListener {
+            // toast untuk mencegah edt kosong
             if (binding.edtName.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Kolom Nama Masih Kosong !", Toast.LENGTH_SHORT).show()
             }
             else {
+                // meneruskan data nama ke fragment ketiga dengan view binding
                 val action = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(null, binding.edtName.text.toString())
                 it.findNavController().navigate(action)
             }

@@ -17,6 +17,7 @@ class FragmentKeempat : Fragment() {
 
     val args: FragmentKeempatArgs by navArgs()
 
+    // createview dan binding data fragment keempat dengan view binding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,6 +29,7 @@ class FragmentKeempat : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // SOCL dengan if yang berisi toast jika data kosong, lalu jika data berisi maka akan di binding dan di passing ke fragment ketiga
         binding.btnScreen4.setOnClickListener {
             if (binding.edtGaji.text.isNullOrEmpty() || binding.edtIuranBulanan.text.isNullOrEmpty() || binding.edtBelanja.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Masih ada kolom yang kosong !", Toast.LENGTH_SHORT).show()

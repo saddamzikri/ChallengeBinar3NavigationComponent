@@ -26,6 +26,7 @@ class FragmentKetiga : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // binding data nama dengan safeargs
         val userName = args.name
         binding.tvName.text = "Halo, $userName"
 
@@ -37,6 +38,8 @@ class FragmentKetiga : Fragment() {
         with(binding) {
             val nilai = args.pengeluaran
 
+            // binding data dari fragment 4 dengan parcelable
+            // jika nilai ada isinya maka semua tv akan ditampilkan
             if (nilai != null) {
                 val gaji = nilai.gaji.toString().toInt()
                 val iuranBulanan = nilai.iuranBulanan.toString().toInt()
@@ -58,6 +61,7 @@ class FragmentKetiga : Fragment() {
                 binding.tvSisaGaji.visibility = View.VISIBLE
 
             } else {
+                // jika tidak berisi maka tv akan tidak terlihat / gone
                 binding.tvGaji.visibility = View.GONE
                 binding.tvIuranBulanan.visibility = View.GONE
                 binding.tvBelanja.visibility = View.GONE
