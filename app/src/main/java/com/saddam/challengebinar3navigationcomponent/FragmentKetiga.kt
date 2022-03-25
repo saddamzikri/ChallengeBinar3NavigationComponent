@@ -42,23 +42,26 @@ class FragmentKetiga : Fragment() {
                 val iuranBulanan = nilai.iuranBulanan.toString().toInt()
                 val belanja = nilai.belanja.toString().toInt()
 
-                val pengeluaran = gaji - iuranBulanan - belanja
+                val pengeluaran = iuranBulanan + belanja
+                val sisaGaji = gaji - iuranBulanan - belanja
 
-                tvGaji.text = "Gaji Anda : $gaji"
-                tvIuranBulanan.text = "Iuran Bulanan anda sebesar : $iuranBulanan"
-                tvBelanja.text = "Jumlah Belanjaan anda adalah : $belanja"
-                tvPengeluaran.text = "Pengeluaran anda adalah sebesar: $pengeluaran"
-                btnScreen3.visibility = View.GONE
-                tvGaji.visibility = View.VISIBLE
-                tvIuranBulanan.visibility = View.VISIBLE
-                tvBelanja.visibility = View.VISIBLE
-                tvPengeluaran.visibility = View.VISIBLE
+                binding.tvGaji.text = "Gaji Anda : $gaji"
+                binding.tvIuranBulanan.text = "Iuran Bulanan anda sebesar : $iuranBulanan"
+                binding.tvBelanja.text = "Jumlah Belanjaan anda adalah : $belanja"
+                binding.tvPengeluaran.text = "Pengeluaran anda adalah sebesar: $pengeluaran"
+                binding.tvSisaGaji.text = "Sisa gaji anda adalah sebesar: $sisaGaji"
+                binding.btnScreen3.visibility = View.GONE
+                binding.tvGaji.visibility = View.VISIBLE
+                binding.tvIuranBulanan.visibility = View.VISIBLE
+                binding.tvBelanja.visibility = View.VISIBLE
+                binding.tvPengeluaran.visibility = View.VISIBLE
+                binding.tvSisaGaji.visibility = View.VISIBLE
 
             } else {
-                tvGaji.visibility = View.GONE
-                tvIuranBulanan.visibility = View.GONE
-                tvBelanja.visibility = View.GONE
-                tvPengeluaran.visibility = View.GONE
+                binding.tvGaji.visibility = View.GONE
+                binding.tvIuranBulanan.visibility = View.GONE
+                binding.tvBelanja.visibility = View.GONE
+                binding.tvPengeluaran.visibility = View.GONE
             }
         }
 

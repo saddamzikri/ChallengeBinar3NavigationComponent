@@ -18,6 +18,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sebelumnya kita kenalan dulu yuk. Silahkan tulis nama kamu dibawah ini"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/edt_input_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -26,6 +39,8 @@
         android:hint="Masukan Nama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintTop_toTopOf="@id/guideline2">
 
         <com.google.android.material.textfield.TextInputEditText
